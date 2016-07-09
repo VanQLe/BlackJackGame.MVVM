@@ -1,0 +1,15 @@
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\bin\Debug\BlackJackGame.exe.config
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\bin\Debug\BlackJackGame.exe
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\bin\Debug\BlackJackGame.pdb
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\BlackJackGame.Client.csprojResolveAssemblyReference.cache
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\App.g.cs
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\BlackJackGame_MarkupCompile.cache
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\BlackJackGame_MarkupCompile.lref
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\Views\MainWindow.baml
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\BlackJackGame.g.resources
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\BlackJackGame.Properties.Resources.resources
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\BlackJackGame.Client.csproj.GenerateResource.Cache
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\BlackJackGame.exe
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\BlackJackGame.pdb
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\obj\Debug\GeneratedInternalTypeHelper.g.cs

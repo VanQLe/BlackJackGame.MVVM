@@ -1,0 +1,1 @@
+C:\Users\Van\Desktop\C# WPF projects\BlackJackGame.MVVM\BlackJackGame\bin\Debug\BlackJackGame.exe.config

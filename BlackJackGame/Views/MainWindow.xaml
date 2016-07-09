@@ -1,0 +1,38 @@
+﻿<Window x:Class="BlackJackGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlackJackGame"
+        xmlns:data="clr-namespace:BlackJackGame.Models"
+        xmlns:viewModels="clr-namespace:BlackJackGame.ViewModels"
+        d:DataContext="{d:DesignInstance viewModels:GameViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="GameStartButtom" Command="{Binding StartCommand}" Content="Start" Grid.Column="2" HorizontalAlignment="Left" Margin="32,260,0,0" VerticalAlignment="Top" Width="84"/>
+        <Button x:Name="NextCardButton" Command="{Binding NextCommand}" Content="Next Card" Grid.Column="2" HorizontalAlignment="Left" Margin="32,164,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label x:Name="label1" Content="Game History" HorizontalAlignment="Left" Margin="0,122,0,0" VerticalAlignment="Top" Width="86"/>
+        <ListBox x:Name="gameHistorylistBox"   HorizontalAlignment="Left" Height="381" Margin="10,164,0,0" VerticalAlignment="Top" Width="324" Grid.ColumnSpan="2">
+
+        </ListBox>
+        <ListBox x:Name="PlayersHandListBox" ItemsSource="{Binding Players}" HorizontalAlignment="Left" Height="70" Margin="10,52,0,0" VerticalAlignment="Top" Width="497" Grid.ColumnSpan="3">
+            <ListBox.Resources>
+                <DataTemplate DataType="{x:Type data:Player}">
+                    <TextBlock>
+                        <Run>Player</Run>
+                        <Run Text="{Binding ID, UpdateSourceTrigger=PropertyChanged}" />
+                        <Run>: </Run>
+                        <Run Text="{Binding HandValue,UpdateSourceTrigger=PropertyChanged}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.Resources>
+        </ListBox>
+        <Label x:Name="label" Content="Players Hand" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="97"/>
+    </Grid>
+</Window>
