@@ -19,6 +19,7 @@ namespace BlackJackGame.Models
             rnd = new Random();
             Deck = new List<Card>();
             createDeck();
+
         }
 
         public List<Card> Deck
@@ -34,6 +35,7 @@ namespace BlackJackGame.Models
             }
         }
 
+
         private void createDeck()
         {
             foreach (var suit in new[] { "Spades", "Hearts", "Clubs", "Diamonds", })
@@ -47,7 +49,7 @@ namespace BlackJackGame.Models
 
         public Card DrawAndRemoveCardFromDeck()
         {
-            if (index < 52)
+            if (index < 46)
             {
                 var index = rnd.Next(Deck.Count);
                 var card = Deck[index];

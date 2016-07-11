@@ -79,11 +79,16 @@ namespace BlackJackGame.Models
                 NotifyPropertyChanged();
             }
         }
-
-        public void AddNewCardToHandValue(Card newCard)
+        /// <summary>
+        /// Add card hit to player hand
+        /// </summary>
+        /// <param name="newCard"></param>
+        public void AddNewCardToPlayerHand(Card newCard)
         {
             HandValue = newCard.CardValue;
+            Cards.Add(newCard);
         }
+
     }
 }
 

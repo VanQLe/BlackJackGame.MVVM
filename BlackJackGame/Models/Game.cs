@@ -10,6 +10,7 @@ namespace BlackJackGame.Models
 {
     public class Game: ObservableObject
     {
+        private int hitNumb;
         private ICollection<Player> players;
         private ICollection<Card> cardsHistory;
         private GameViewModel viewModel;
@@ -38,13 +39,20 @@ namespace BlackJackGame.Models
             for (int i = 0; i < 2; i++)
             {
                 foreach (var player in players)
-                {
-                    Card newCard = viewModel.NextCard();
-                    player.Cards.Add(newCard);
-                    player.AddNewCardToHandValue(newCard);
+                {                
+                    Card newCard = viewModel.DrewNextCard();
+                    //hitNumb++;
+                    newCard.HitNumb = ++hitNumb;               
+                    player.AddNewCardToPlayerHand(newCard);
                 }
             }
         }
-       
+
+        public void NextCardDraw()
+        {
+            Card newCard = viewModel.DrewNextCard();
+            newCard.HitNumb = ++hitNumb;
+        }
+ 
     }
 }

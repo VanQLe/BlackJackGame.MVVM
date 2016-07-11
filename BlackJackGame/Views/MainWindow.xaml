@@ -18,8 +18,19 @@
         <Button x:Name="GameStartButtom" Command="{Binding StartCommand}" Content="Start" Grid.Column="2" HorizontalAlignment="Left" Margin="32,260,0,0" VerticalAlignment="Top" Width="84"/>
         <Button x:Name="NextCardButton" Command="{Binding NextCommand}" Content="Next Card" Grid.Column="2" HorizontalAlignment="Left" Margin="32,164,0,0" VerticalAlignment="Top" Width="84"/>
         <Label x:Name="label1" Content="Game History" HorizontalAlignment="Left" Margin="0,122,0,0" VerticalAlignment="Top" Width="86"/>
-        <ListBox x:Name="gameHistorylistBox"   HorizontalAlignment="Left" Height="381" Margin="10,164,0,0" VerticalAlignment="Top" Width="324" Grid.ColumnSpan="2">
-
+        <ListBox x:Name="gameHistorylistBox" ItemsSource="{Binding CardHistory}"  HorizontalAlignment="Left" Height="381" Margin="10,164,0,0" VerticalAlignment="Top" Width="324" Grid.ColumnSpan="2">
+            <ListBox.Resources>
+                <DataTemplate DataType="{x:Type data:Card}">
+                    <TextBlock> 
+                        <Run>Hit#</Run>
+                        <Run Text="{Binding HitNumb, UpdateSourceTrigger=PropertyChanged}" />
+                        <Run>: </Run>
+                        <Run Text="{Binding Rank, UpdateSourceTrigger=PropertyChanged}" />
+                        <Run> of </Run>
+                        <Run Text="{Binding Suit,UpdateSourceTrigger=PropertyChanged}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.Resources>
         </ListBox>
         <ListBox x:Name="PlayersHandListBox" ItemsSource="{Binding Players}" HorizontalAlignment="Left" Height="70" Margin="10,52,0,0" VerticalAlignment="Top" Width="497" Grid.ColumnSpan="3">
             <ListBox.Resources>

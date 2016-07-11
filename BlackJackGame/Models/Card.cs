@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace BlackJackGame.Models
 {
-    public class Card
+    public class Card:ObservableObject
     {
+        private int hitNumb;
         public int rank;
         public int cardValue;
         public string suit;
@@ -25,6 +26,7 @@ namespace BlackJackGame.Models
             Rank = rank;
             Suit = suit;
             CardValue = cardValue;
+            HitNumb = hitNumb;
         }
 
 
@@ -38,6 +40,7 @@ namespace BlackJackGame.Models
             set
             {
                 suit = value;
+                NotifyPropertyChanged();
             }
         }
 
@@ -51,6 +54,7 @@ namespace BlackJackGame.Models
             set
             {
                 rank = value;
+                NotifyPropertyChanged();
             }
         }
 
@@ -69,6 +73,22 @@ namespace BlackJackGame.Models
                     cardValue = 11;
                 else
                     cardValue = value;
+
+                NotifyPropertyChanged();
+            }
+        }
+
+        public int HitNumb
+        {
+            get
+            {
+                return hitNumb;
+            }
+
+            set
+            {
+                hitNumb = value;
+                NotifyPropertyChanged();
             }
         }
     }

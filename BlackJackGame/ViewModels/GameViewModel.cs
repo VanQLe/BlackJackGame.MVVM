@@ -17,7 +17,7 @@ namespace BlackJackGame.ViewModels
         public BlackJackDeck gameDeck;//deck for the game
         public bool GameOver;
         public Game currentGame;
-        public ICollection<Card> CardsHistory { get; set; }
+        public  ICollection<Card> CardHistory { get; set; }
         public ICollection<Player> Players { get; set; }
         public int numPlayers = 3;
         /// <summary>
@@ -30,8 +30,8 @@ namespace BlackJackGame.ViewModels
             GameOver = true;
             StartCommand = new StartGameCommand(this);
             NextCommand = new NextCardCommand(this);        
-            CardsHistory = new ObservableCollection<Card>();
-            CurrentGame = new Game(this, Players, CardsHistory, numPlayers);
+            CardHistory = new ObservableCollection<Card>();
+            CurrentGame = new Game(this, Players, CardHistory, numPlayers);
         }
         public ICommand StartCommand { get; private set; }
         public ICommand NextCommand { get; private set; }
@@ -70,15 +70,19 @@ namespace BlackJackGame.ViewModels
 
             MessageBox.Show("Start Button Pressed");
         }
-        public Card NextCard()
-        {   
+        public void NextCard()
+        {
+            CurrentGame.NextCardDraw();
+        }
+        public Card DrewNextCard()
+        {
             Card newCard = GameDeck.DrawAndRemoveCardFromDeck();
-            MessageBox.Show("Next Card Button Pressed");
+            CardHistory.Add(newCard);//add new card to game history
+            //MessageBox.Show("Next Card Button Pressed");
             return newCard;
         }
 
 
-       
     }
 
 }
