@@ -12,8 +12,8 @@ namespace BlackJackGame.Models
     {
         private int playerID;
         private string playerName;
-        public int handValue;
-        public ICollection<Card> Cards;
+        private int handValue;
+        private ICollection<Card> Cards;
         private bool playerTurn = true;
         /// <summary>
         /// Default constructor to initialize a new player

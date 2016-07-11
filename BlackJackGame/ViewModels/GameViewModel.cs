@@ -31,7 +31,7 @@ namespace BlackJackGame.ViewModels
             StartCommand = new StartGameCommand(this);
             NextCommand = new NextCardCommand(this);        
             CardHistory = new ObservableCollection<Card>();
-            CurrentGame = new Game(this, Players, CardHistory, numPlayers);
+            CurrentGame = new Game(this);
         }
         public ICommand StartCommand { get; private set; }
         public ICommand NextCommand { get; private set; }
@@ -78,7 +78,6 @@ namespace BlackJackGame.ViewModels
         {
             Card newCard = GameDeck.DrawAndRemoveCardFromDeck();
             CardHistory.Add(newCard);//add new card to game history
-            //MessageBox.Show("Next Card Button Pressed");
             return newCard;
         }
 

@@ -9,7 +9,7 @@ namespace BlackJackGame.Models
 {
     public class Card:ObservableObject
     {
-        private int hitNumb;
+        private int cardNum;
         public int rank;
         public int cardValue;
         public string suit;
@@ -26,7 +26,7 @@ namespace BlackJackGame.Models
             Rank = rank;
             Suit = suit;
             CardValue = cardValue;
-            HitNumb = hitNumb;
+            HitNumb = cardNum;
         }
 
 
@@ -82,12 +82,12 @@ namespace BlackJackGame.Models
         {
             get
             {
-                return hitNumb;
+                return cardNum;
             }
 
             set
             {
-                hitNumb = value;
+                cardNum = value;
                 NotifyPropertyChanged();
             }
         }
